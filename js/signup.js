@@ -55,17 +55,17 @@ function passwordValidation() {
   if (passwordFormat.test(password.value)){
     if (password.value.length == 8) {
       passwordError.innerHTML = "<small>password strength is poor!</small>";
-      passwordError.style.border = "1px solid red";
+      password.style.border = "1px solid red";
       passwordError.style.color = "red";
       return false;
     } else if (password.value.length > 8 && password.value.length  <12) {
       passwordError.innerHTML = "<small>password strength is medium!</small>";
-      passwordError.style.border = "1px solid blue";
+      password.style.border = "1px solid blue";
       passwordError.style.color = "blue";
       return false;
     } else if (password.value.length == 12) {
       passwordError.innerHTML = "<small>password strength is strong!</small>";
-      passwordError.style.border = "1px solid green";
+      password.style.border = "1px solid green";
       passwordError.style.color = "green";
       return true;
       
@@ -74,7 +74,7 @@ function passwordValidation() {
     else{
       passwordError.innerHTML =
       "<label>Password must contain Minimum 12 characters, at least one uppercase, and one lower case, must contain at least one number</label>";
-    password.style.border = "1px solid #red";
+    password.style.border = "1px solid red";
     passwordError.style.color = "#red";
     return false;
     }
@@ -82,7 +82,7 @@ function passwordValidation() {
  } 
  else{
   passwordError.innerHTML = "<label>Password is too short</label>";
-  password.style.border = "1px solid #red";
+  password.style.border = "1px solid red";
   passwordError.style.color = "red";
   return false;
 }
@@ -91,13 +91,13 @@ function passwordValidation() {
 function repeatPasswordValidation() {
   if (password.value === repeatPassword.value) {
     repeatPasswordError.innerHTML = "<small>password matched</small>";
-    repeatPassword.style.color = "green";
-    repeatPassword.style.b = "1px solid green";
+    repeatPasswordError.style.color = "green";
+    repeatPassword.style.border = "1px solid green";
     return true;
   } else {
     repeatPasswordError.innerHTML = "<small>password does'nt matched</small>";
-    repeatPassword.style.color = "red";
-    repeatPassword.style.b = "1px solid red";
+    repeatPasswordError.style.color = "red";
+    repeatPassword.style.border = "1px solid red";
     return false;
   }
 }
