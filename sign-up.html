@@ -52,32 +52,36 @@
 
         <!-- form -->
         <div class="col col col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
-            <form class="sign-up ">
+            <form onsubmit="return validate();" action="/sign-in.html" class="sign-up ">
                 <div class="mb-3">
                     <h2 class="signup heading text-center">sign-up</h2>
-                    <label for="name" class="form-label text-justify p-1">your name</label>
+                    <!-- <label for="name" class="form-label text-justify p-1">your name</label> -->
                     <input type="text" placeholder="your name" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
+                        aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label p-1">E-mail</label>
-                    <input type="email" placeholder="your e-mail id" class="form-control" id="exampleInputPassword1">
+                    <!-- <label for="email" class="form-label p-1">E-mail</label> -->
+                    <input type="email" placeholder="your e-mail id" class="form-control" id="email">
                 </div>
+                <div id="email-error"></div>
                 <div class="mb-3">
-                    <label for="number" class="form-label p-1">phone number</label>
-                    <input type="number" placeholder="your phone NO" class="form-control" id="exampleInputPassword1">
+                    <!-- <label for="number" class="form-label p-1">phone number</label> -->
+                    <input type="text" placeholder="your phone NO" class="form-control" id="phone">
                 </div>
+                <div id="phone-error"></div>
                 <div class="mb-3">
-                    <label for="password" class="form-label p-1">password</label>
-                    <input type="password" placeholder="password" class="form-control" id="exampleInputPassword1">
+                    <!-- <label for="password" class="form-label p-1">password</label> -->
+                    <input type="password" placeholder="password"  class="form-control" id="password">
                 </div>
+                <div id="password-error"></div>
                 <div class="mb-3">
-                    <label for="password" class="form-label p-1">repeat-password</label>
-                    <input type="password" placeholder="repeat your password" class="form-control"
-                        id="exampleInputPassword1">
+                    <!-- <label for="password" class="form-label p-1">repeat-password</label> -->
+                    <input type="password" maxlength="12" placeholder="repeat your password" class="form-control"
+                        id="repeatPassword">
                 </div>
+                <div id="repeatPassword-error"></div>
 
-                <button type="submit" class="btn btn-primary">SIGN-UP</button> <br>
+                <button type="submit" class="btn btn-primary ">SIGN-UP</button> <br>
                 <label for="">
                     <p> Already have an account ? <a href="login.html" id="">login here</a> </p>
                 </label>
@@ -91,6 +95,8 @@
             <h3> copyright@2023</h3>
         </footer>
     </div>
+    <!-- script -->
+    <script src="/js/signup.js"></script>
 
 </body>
 
